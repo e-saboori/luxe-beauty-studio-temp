@@ -704,31 +704,25 @@ p {
 }
 
 .instagram-work-copy h2 {
-  margin-bottom: 16px;
-  color: #0f0e0d;
-  font-family: var(--font-body), Arial, Helvetica, sans-serif;
-  font-size: clamp(3.1rem, 5vw, 4.3rem);
-  font-weight: 500;
-  line-height: 1.05;
-  letter-spacing: 0;
+  margin-bottom: 18px;
+  color: var(--color-text);
+  font-family: var(--font-heading), Georgia, "Times New Roman", serif;
+  font-size: clamp(2.3rem, 3.6vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
 }
 
 .instagram-work-copy p:not(.eyebrow) {
   margin-bottom: 34px;
-  color: #0f0e0d;
-  font-size: 1.02rem;
-  line-height: 1.45;
+  max-width: 500px;
+  color: var(--color-text);
+  font-size: clamp(1.08rem, 1.5vw, 1.25rem);
+  line-height: 1.9;
 }
 
 .instagram-work-copy .button {
   min-width: 226px;
-  background: #c79b82;
-  border-color: #c79b82;
-}
-
-.instagram-work-copy .button:hover {
-  background: #b9886c;
-  border-color: #b9886c;
 }
 
 .social-button-action {
