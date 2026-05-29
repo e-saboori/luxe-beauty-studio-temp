@@ -337,6 +337,18 @@ p {
   line-height: 1.55;
 }
 
+.service-card .booking-helper,
+.service-showcase-copy .booking-helper,
+.booking-box .booking-helper,
+.footer-booking .booking-helper {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.55;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
 .hero-image {
   position: relative;
   align-self: stretch;
@@ -653,6 +665,13 @@ p {
 .service-showcase-action {
   width: fit-content;
   margin-top: 0;
+}
+
+.service-showcase-copy .service-showcase-action .booking-helper {
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  font-weight: 400;
+  line-height: 1.55;
 }
 
 .service-showcase-image {
