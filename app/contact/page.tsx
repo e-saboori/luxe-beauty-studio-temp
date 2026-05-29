@@ -41,10 +41,6 @@ export default function ContactPage() {
         <div className="container contact-main-grid">
           <form className="message-card">
             <h2>Send Us a Message</h2>
-            <div className="mini-gold-line card-ornament" aria-hidden="true">
-              <span />
-              <span>✦</span>
-            </div>
             <div className="field-row">
               <label className="field">
                 <User size={20} aria-hidden="true" />
@@ -79,10 +75,6 @@ export default function ContactPage() {
 
           <div className="contact-info-card">
             <h2>Contact Information</h2>
-            <div className="mini-gold-line card-ornament" aria-hidden="true">
-              <span />
-              <span>✦</span>
-            </div>
             <div className="info-list">
               <div className="info-item">
                 <span className="info-icon">
@@ -91,15 +83,6 @@ export default function ContactPage() {
                 <div>
                   <h3>Phone</h3>
                   <a href={`tel:${business.phone.replace(/[^\d+]/g, "")}`}>{business.phone}</a>
-                </div>
-              </div>
-              <div className="info-item">
-                <span className="info-icon">
-                  <Mail size={26} aria-hidden="true" />
-                </span>
-                <div>
-                  <h3>Email</h3>
-                  <a href={`mailto:${business.email}`}>{business.email}</a>
                 </div>
               </div>
               <div className="info-item">

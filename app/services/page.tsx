@@ -12,28 +12,28 @@ export const metadata: Metadata = {
 
 const serviceSections = [
   {
-    title: "Lash",
+    title: "Lash Extensions and Lifts",
     description:
       "Soft, customized lash extensions designed to add natural-looking length, fullness, and everyday polish.",
     image: "/images/lash/classic-lash-result.jpg",
     alt: "Classic lash extension result"
   },
   {
-    title: "Lips",
+    title: "Lip Blush",
     description:
       "Lip blush services create a subtle, balanced tint that enhances your natural lip color and shape.",
     image: "/images/lip/lip-blush-result.jpg",
     alt: "Lip blush result"
   },
   {
-    title: "Eyebrows",
+    title: "Eyebrows & Microblading",
     description:
       "Brow shaping and microblading help frame your face with clean, balanced, and natural-looking definition.",
     image: "/images/eyebrows/brow-shaping-result.jpg",
     alt: "Eyebrow shaping result"
   },
   {
-    title: "Eyeline",
+    title: "Eyeliner",
     description:
       "Eyeliner shading adds soft definition along the lash line for a polished look that feels effortless.",
     image: "/images/eyeline/eyeliner-shading-result.jpg",

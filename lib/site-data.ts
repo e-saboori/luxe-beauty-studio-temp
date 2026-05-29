@@ -10,7 +10,6 @@ export const business = {
   description:
     "Luxury lash extensions, brows, lip blush, and semi-permanent beauty services designed to highlight your natural features.",
   phone: "(647) 685-5659",
-  email: "hello@sepidbeauty.com",
   address: "5883 Leslie St, North York, ON M2H 1J8",
   hours: [
     ["Monday", "08:30 - 20:00"],
@@ -38,7 +37,6 @@ export const socialLinks = [
 
 export const contactLinks = [
   { label: business.phone, href: `tel:${business.phone.replace(/[^\d+]/g, "")}`, icon: Phone },
-  { label: business.email, href: `mailto:${business.email}`, icon: Mail },
   { label: business.address, href: "/contact", icon: MapPin },
   { label: "Book Appointment", href: bookingUrl, icon: Calendar }
 ];
@@ -82,16 +80,12 @@ export const trustPoints = [
 
 export const aboutPhotos = [
   {
-    src: "/images/about/artist-portrait.jpg",
-    alt: "Beauty artist portrait"
-  },
-  {
     src: "/images/about/studio-detail.jpg",
     alt: "Beauty studio detail"
   },
   {
-    src: "/images/about/contact-hero-decor.jpg",
-    alt: "Beauty appointment detail"
+    src: "/images/about/artist-portrait.jpg",
+    alt: "Beauty artist portrait"
   },
   {
     src: "/images/about/studio-interior.jpg",
