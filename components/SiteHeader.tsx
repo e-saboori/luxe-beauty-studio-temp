@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Calendar } from "lucide-react";
+import { useState } from "react";
+import { Calendar, Menu, X } from "lucide-react";
 import { bookingUrl, navItems } from "@/lib/site-data";
 import { Button } from "./Button";
 
@@ -20,12 +21,13 @@ export function Logo() {
 
 export function SiteHeader() {
   const pathname = usePathname();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <header className="site-header">
       <div className="container nav">
         <Logo />
-        <nav className="nav-links" aria-label="Main navigation">
+        <nav className={`nav-links ${isMenuOpen ? "is-open" : ""}`} aria-label="Main navigation">
           {navItems.map((item) => {
             const isActive = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
 
@@ -35,6 +37,7 @@ export function SiteHeader() {
                 key={item.href}
                 className={isActive ? "is-active" : undefined}
                 aria-current={isActive ? "page" : undefined}
+                onClick={() => setIsMenuOpen(false)}
                 scroll
               >
                 {item.label}
@@ -44,8 +47,17 @@ export function SiteHeader() {
         </nav>
         <Button href={bookingUrl} className="nav-book">
           <Calendar size={16} aria-hidden="true" />
-          Book Now
+          Book Appointment
         </Button>
+        <button
+          type="button"
+          className="menu-toggle"
+          aria-label={isMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-expanded={isMenuOpen}
+          onClick={() => setIsMenuOpen((open) => !open)}
+        >
+          {isMenuOpen ? <X size={22} aria-hidden="true" /> : <Menu size={22} aria-hidden="true" />}
+        </button>
       </div>
     </header>
   );

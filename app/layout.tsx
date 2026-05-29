@@ -3,7 +3,6 @@ import { Allura, Cormorant_Garamond, Great_Vibes, Montserrat } from "next/font/g
 import "./globals.css";
 import "./luxe-beauty-studio.css";
 import { Footer } from "@/components/Footer";
-import { MobileBookingBar } from "@/components/MobileBookingBar";
 import { ScrollToTop } from "@/components/ScrollToTop";
 import { SiteHeader } from "@/components/SiteHeader";
 import { business } from "@/lib/site-data";
@@ -69,7 +68,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main>{children}</main>
         <Footer />
-        <MobileBookingBar />
       </body>
     </html>
   );

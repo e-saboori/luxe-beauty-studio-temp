@@ -1,7 +1,9 @@
 import Image from "next/image";
 import { Award, CalendarCheck, ShieldCheck } from "lucide-react";
 import { BookingCTA } from "@/components/BookingCTA";
+import { BookingHelperText } from "@/components/BookingHelperText";
 import { Button } from "@/components/Button";
+import { FAQSection } from "@/components/FAQSection";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { withBasePath } from "@/lib/paths";
@@ -72,11 +74,15 @@ export default async function HomePage() {
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-content">
+            <p className="eyebrow hero-location">North York / Toronto</p>
             <h1>{business.tagline}</h1>
             <div className="gold-line" />
             <p>{business.description}</p>
             <div className="hero-actions">
-              <Button href={bookingUrl}>Book Appointment</Button>
+              <div className="hero-booking-action">
+                <Button href={bookingUrl}>Book Appointment</Button>
+                <BookingHelperText />
+              </div>
               <Button href="/services" variant="secondary">
                 View Services
               </Button>
@@ -156,6 +162,8 @@ export default async function HomePage() {
           })}
         </div>
       </section>
+
+      <FAQSection />
 
       <BookingCTA title="Ready to Book?" copy="Your perfect look is just a click away." buttonLabel="Book Appointment" />
     </>

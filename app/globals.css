@@ -39,10 +39,6 @@ main {
   background: var(--color-bg);
 }
 
-body:has(.mobile-booking-bar) {
-  padding-bottom: 0;
-}
-
 img {
   display: block;
   max-width: 100%;
@@ -227,6 +223,17 @@ p {
   margin-left: auto;
 }
 
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-card);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
 .nav-links a {
   position: relative;
   display: inline-flex;
@@ -300,12 +307,34 @@ p {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 18px 24px;
+  align-items: flex-start;
   margin-top: 36px;
 }
 
 .hero-actions .button {
   min-width: 180px;
+}
+
+.hero-location {
+  margin-bottom: 16px;
+  color: var(--color-gold-dark);
+}
+
+.hero-booking-action,
+.booking-action,
+.service-booking-action {
+  display: grid;
+  gap: 9px;
+  justify-items: start;
+}
+
+.booking-helper {
+  max-width: 330px;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  line-height: 1.55;
 }
 
 .hero-image {
@@ -512,6 +541,15 @@ p {
   width: 100%;
 }
 
+.service-booking-action {
+  width: 100%;
+  margin-top: auto;
+}
+
+.service-booking-action .booking-helper {
+  max-width: none;
+}
+
 .services-intro {
   padding: 92px 0 68px;
   background: var(--color-bg);
@@ -610,6 +648,11 @@ p {
 
 .service-showcase-copy .button {
   min-width: 160px;
+}
+
+.service-showcase-action {
+  width: fit-content;
+  margin-top: 0;
 }
 
 .service-showcase-image {
@@ -860,6 +903,15 @@ p {
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.58);
   color: var(--color-gold-light);
+}
+
+.booking-action {
+  justify-items: end;
+}
+
+.booking-action .booking-helper {
+  max-width: 280px;
+  text-align: right;
 }
 
 .page-hero {
@@ -1261,6 +1313,40 @@ p {
   color: var(--color-text);
 }
 
+.faq-section {
+  padding: 78px 0 86px;
+  background: var(--color-bg);
+}
+
+.faq-heading {
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.faq-item {
+  padding: 26px 28px;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background: var(--color-card);
+}
+
+.faq-item h3 {
+  margin-bottom: 10px;
+  font-size: 1.32rem;
+}
+
+.faq-item p {
+  color: var(--color-text-muted);
+  font-size: 0.94rem;
+  line-height: 1.75;
+}
+
 .contact-card h2 {
   margin-bottom: 24px;
   font-size: 2.5rem;
@@ -1303,23 +1389,51 @@ p {
 }
 
 .site-footer {
-  padding-top: 70px;
+  padding-top: 42px;
   border-top: 1px solid var(--color-border);
   background: var(--color-footer);
 }
 
-.footer-grid {
+.footer-simple {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 48px;
-  align-items: start;
+  grid-template-columns: minmax(260px, 1.3fr) minmax(240px, 1fr) auto;
+  gap: 36px;
+  align-items: center;
 }
 
-.footer-copy,
-.footer-booking p {
+.footer-brand .social-links {
   margin-top: 18px;
-  font-size: 0.98rem;
-  line-height: 1.8;
+}
+
+.footer-contact {
+  display: grid;
+  gap: 8px;
+  color: var(--color-text-muted);
+  font-size: 0.94rem;
+  line-height: 1.7;
+}
+
+.footer-contact p {
+  margin: 0;
+}
+
+.footer-contact a:hover {
+  color: var(--color-gold-dark);
+}
+
+.footer-booking {
+  display: grid;
+  gap: 9px;
+  justify-items: end;
+}
+
+.footer-booking .button {
+  min-width: 220px;
+}
+
+.footer-booking .booking-helper {
+  max-width: 280px;
+  text-align: right;
 }
 
 .footer-title {
@@ -1338,35 +1452,9 @@ p {
   font-size: 0.95rem;
 }
 
-.hours-list div {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 16px;
-}
-
-.hours-list dt,
-.hours-list dd {
-  margin: 0;
-  color: var(--color-text-muted);
-}
-
-.hours-large {
-  gap: 14px;
-}
-
-.footer-booking .button {
-  width: 100%;
-  max-width: 260px;
-  margin-top: 24px;
-}
-
 .footer-list {
   font-size: 0.96rem;
   line-height: 1.8;
-}
-
-.mobile-booking-bar {
-  display: none;
 }
 
 .copyright {
@@ -1431,7 +1519,8 @@ p {
 
   .gallery-grid,
   .values-grid,
-  .footer-grid {
+  .footer-grid,
+  .footer-simple {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1476,31 +1565,67 @@ p {
 
   .nav {
     min-height: auto;
-    padding: 14px 0 12px;
+    padding: 8px 0;
     flex-wrap: wrap;
+    gap: 8px;
   }
 
   .nav-links {
-    order: 3;
+    order: 4;
     width: 100%;
-    justify-content: space-between;
-    gap: 10px;
-    padding-top: 8px;
-    font-size: 0.76rem;
+    display: none;
+    gap: 4px;
+    margin-top: 6px;
+    padding: 10px 0 4px;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.72rem;
+  }
+
+  .nav-links.is-open {
+    display: grid;
+  }
+
+  .nav-links a {
+    min-height: 36px;
+    justify-content: flex-start;
+    padding: 0;
   }
 
   .nav-book {
-    margin-left: 0;
-    min-height: 42px;
-    padding: 0 16px;
+    margin-left: auto;
+    min-height: 38px;
+    padding: 0 10px;
+    border-radius: 9px;
+    font-size: 0.58rem;
+    letter-spacing: 0.06em;
+  }
+
+  .nav-book svg {
+    display: none;
+  }
+
+  .menu-toggle {
+    order: 3;
+    width: 40px;
+    height: 38px;
+    display: inline-flex;
+    flex: 0 0 auto;
   }
 
   .logo {
-    font-size: 1.45rem;
+    flex: 1 1 auto;
+    min-width: 0;
+    gap: 7px;
+    font-size: 1.12rem;
+    letter-spacing: 0.14em;
   }
 
   .logo-mark {
-    font-size: 2.4rem;
+    font-size: 1.9rem;
+  }
+
+  .logo small {
+    display: none;
   }
 
   h1 {
@@ -1585,8 +1710,27 @@ p {
     width: 100%;
   }
 
+  .nav-book {
+    width: auto;
+  }
+
   .hero-actions .button {
     min-height: 56px;
+  }
+
+  .hero-booking-action,
+  .booking-action,
+  .service-booking-action,
+  .service-showcase-action {
+    width: 100%;
+    justify-items: stretch;
+  }
+
+  .booking-helper,
+  .booking-action .booking-helper,
+  .footer-booking .booking-helper {
+    max-width: none;
+    text-align: left;
   }
 
   .portrait-row,
@@ -1595,7 +1739,9 @@ p {
   .trust-grid,
   .gallery-grid,
   .values-grid,
-  .footer-grid {
+  .footer-grid,
+  .footer-simple,
+  .faq-grid {
     grid-template-columns: 1fr;
     gap: 34px;
   }
@@ -1662,6 +1808,18 @@ p {
     width: 100%;
   }
 
+  .footer-simple {
+    text-align: left;
+  }
+
+  .footer-booking {
+    justify-items: stretch;
+  }
+
+  .footer-booking .button {
+    min-width: 0;
+  }
+
   .footer-list,
   .hours-list,
   .footer-copy,
@@ -1703,7 +1861,4 @@ p {
     margin: 0 auto;
   }
 
-  .mobile-booking-bar {
-    display: none;
-  }
 }

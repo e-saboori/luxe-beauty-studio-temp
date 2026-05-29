@@ -6,9 +6,9 @@ export const bookingUrl =
 
 export const business = {
   name: "Sepid Beauty Studio",
-  tagline: "Effortless Beauty, Expertly Enhanced",
+  tagline: "Natural Lash, Brow & Permanent Makeup Services in North York",
   description:
-    "Luxury lash extensions, brows, lip blush, and semi-permanent beauty services designed to highlight your natural features.",
+    "Soft, elegant beauty enhancements including lash extensions, brows, lip blush, eyeliner, and permanent makeup - designed to enhance your natural features.",
   phone: "(647) 685-5659",
   address: "5883 Leslie St, North York, ON M2H 1J8",
   hours: [
@@ -75,6 +75,37 @@ export const trustPoints = [
   {
     title: "Easy Online Booking",
     copy: "Reserve your appointment quickly through Square."
+  }
+];
+
+export const faqItems = [
+  {
+    question: "How do I know which service to book?",
+    answer: "Choose the closest service on Square, or contact us if you are unsure. We can help guide you before booking."
+  },
+  {
+    question: "Does the treatment hurt?",
+    answer: "Comfort varies by person and service. Most clients describe the experience as manageable and gentle."
+  },
+  {
+    question: "How long does healing take?",
+    answer: "Healing depends on your skin, service, and aftercare. We will explain what to expect for your appointment."
+  },
+  {
+    question: "Do I need a touch-up?",
+    answer: "Some services may benefit from a touch-up. It depends on your skin, goals, and how the result settles."
+  },
+  {
+    question: "What should I do before my appointment?",
+    answer: "Arrive with clean skin and avoid heavy makeup around the treatment area when possible."
+  },
+  {
+    question: "What aftercare should I follow?",
+    answer: "Aftercare depends on the service. You will receive simple instructions to help support your results."
+  },
+  {
+    question: "Can I wear makeup after my appointment?",
+    answer: "It depends on the service and treatment area. We will let you know when makeup is appropriate again."
   }
 ];
 

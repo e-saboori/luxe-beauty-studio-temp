@@ -1,57 +1,41 @@
-import Link from "next/link";
+"use client";
+
 import { Calendar } from "lucide-react";
-import { bookingUrl, business, contactLinks } from "@/lib/site-data";
+import { usePathname } from "next/navigation";
+import { bookingUrl, business } from "@/lib/site-data";
+import { BookingHelperText } from "./BookingHelperText";
 import { Button } from "./Button";
 import { Logo } from "./SiteHeader";
 import { SocialLinks } from "./SocialLinks";
 
 export function Footer() {
+  const pathname = usePathname();
+  const isContactPage = pathname.startsWith("/contact");
+
   return (
     <footer className="site-footer">
-      <div className="container footer-grid">
-        <div>
+      <div className="container footer-simple">
+        <div className="footer-brand">
           <Logo />
           <SocialLinks />
         </div>
-        <div>
-          <h2 className="footer-title">Contact</h2>
-          <div className="footer-list">
-            {contactLinks.slice(0, 3).map(({ label, href, icon: Icon }) => (
-              href.startsWith("/") ? (
-                <Link key={label} href={href}>
-                  <Icon size={18} aria-hidden="true" />
-                  <span>{label}</span>
-                </Link>
-              ) : (
-                <a key={label} href={href}>
-                  <Icon size={18} aria-hidden="true" />
-                  <span>{label}</span>
-                </a>
-              )
-            ))}
+
+        {!isContactPage ? (
+          <div className="footer-contact">
+            <p>{business.address}</p>
+            <a href={`tel:${business.phone.replace(/[^\d+]/g, "")}`}>{business.phone}</a>
           </div>
-        </div>
-        <div>
-          <h2 className="footer-title">Hours</h2>
-          <dl className="hours-list">
-            {business.hours.map(([day, hours]) => (
-              <div key={day}>
-                <dt>{day}</dt>
-                <dd>{hours}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
+        ) : null}
+
         <div className="footer-booking">
-          <h2 className="footer-title">Book Your Appointment</h2>
-          <p>Appointments are reserved through Square for a simple, secure experience.</p>
           <Button href={bookingUrl}>
             <Calendar size={16} aria-hidden="true" />
             Book Appointment
           </Button>
+          <BookingHelperText />
         </div>
       </div>
-      <p className="copyright">© 2026 {business.name}. All rights reserved.</p>
+      <p className="copyright">&copy; 2026 {business.name}. All rights reserved.</p>
     </footer>
   );
 }

@@ -1,5 +1,6 @@
 import { Calendar } from "lucide-react";
 import { bookingUrl } from "@/lib/site-data";
+import { BookingHelperText } from "./BookingHelperText";
 import { Button } from "./Button";
 
 type BookingCTAProps = {
@@ -23,7 +24,10 @@ export function BookingCTA({
           <h2>{title}</h2>
           <p>{copy}</p>
         </div>
-        <Button href={bookingUrl}>{buttonLabel}</Button>
+        <div className="booking-action">
+          <Button href={bookingUrl}>{buttonLabel}</Button>
+          <BookingHelperText />
+        </div>
       </div>
     </section>
   );
