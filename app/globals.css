@@ -450,6 +450,14 @@ p {
   object-fit: cover;
 }
 
+.service-card-eyebrows-microneedling .service-card-image img {
+  object-position: center calc(50% + 20px);
+}
+
+.service-card-eyeliner-featured .service-card-image img {
+  object-position: center top;
+}
+
 .featured-grid .service-badge {
   display: none;
 }
@@ -622,6 +630,8 @@ p {
 }
 
 .service-showcase-image {
+  width: 90%;
+  justify-self: center;
   overflow: hidden;
   border-radius: 16px;
   background: var(--color-bg-soft);
@@ -633,6 +643,10 @@ p {
   aspect-ratio: 1.12;
   height: auto;
   object-fit: cover;
+}
+
+.service-showcase-image-eyeliner img {
+  object-position: center top;
 }
 
 .center-action {
@@ -1233,7 +1247,7 @@ p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 36px;
   align-items: center;
-  width: min(1140px, calc(100% - 100px));
+  width: min(1140px, calc(100% - 180px));
 }
 
 .footer-brand .social-links {

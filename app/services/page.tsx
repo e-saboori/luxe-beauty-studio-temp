@@ -12,6 +12,7 @@ export const metadata: Metadata = {
 
 const serviceSections = [
   {
+    id: "lashes",
     title: "Lash Extensions and Lifts",
     description:
       "Soft, customized lash extensions designed to add natural-looking length, fullness, and everyday polish.",
@@ -19,6 +20,7 @@ const serviceSections = [
     alt: "Classic lash extension result"
   },
   {
+    id: "lip-blush",
     title: "Lip Blush",
     description:
       "Lip blush services create a subtle, balanced tint that enhances your natural lip color and shape.",
@@ -26,6 +28,7 @@ const serviceSections = [
     alt: "Lip blush result"
   },
   {
+    id: "eyebrows",
     title: "Eyebrows & Microblading",
     description:
       "Brow shaping and microblading help frame your face with clean, balanced, and natural-looking definition.",
@@ -33,6 +36,7 @@ const serviceSections = [
     alt: "Eyebrow shaping result"
   },
   {
+    id: "eyeliner",
     title: "Eyeliner",
     description:
       "Eyeliner shading adds soft definition along the lash line for a polished look that feels effortless.",
@@ -68,7 +72,7 @@ export default function ServicesPage() {
                   <Button href={bookingUrl}>Book Appointment</Button>
                 </div>
               </div>
-              <div className="service-showcase-image">
+              <div className={`service-showcase-image service-showcase-image-${service.id}`}>
                 <Image
                   src={withBasePath(service.image)}
                   alt={service.alt}

@@ -19,7 +19,7 @@ type ServiceCardProps = {
 
 export function ServiceCard({ service }: ServiceCardProps) {
   return (
-    <article className="service-card">
+    <article className={`service-card service-card-${service.id}`}>
       {service.imageSrc ? (
         <div className="service-card-image">
           <Image
