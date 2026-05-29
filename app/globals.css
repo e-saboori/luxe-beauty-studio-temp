@@ -451,6 +451,10 @@ p {
   object-fit: cover;
 }
 
+.featured-grid .service-badge {
+  display: none;
+}
+
 .service-badge {
   width: 86px;
   height: 86px;
@@ -668,7 +672,7 @@ p {
   z-index: 3;
 }
 
-.instagram-post-eyeliner {
+.instagram-post-lash {
   top: 58px;
   right: 0;
   z-index: 2;
@@ -716,9 +720,9 @@ p {
 
 .instagram-post-image img {
   width: 100%;
-  aspect-ratio: 0.92;
+  aspect-ratio: auto;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .instagram-play {
@@ -921,7 +925,7 @@ p {
 }
 
 .about-page {
-  padding: 72px 0 88px;
+  padding: 80px 0;
   border-bottom: 1px solid var(--color-border);
   background:
     radial-gradient(circle at 20% 12%, rgba(232, 194, 168, 0.28), transparent 28%),
@@ -954,10 +958,10 @@ p {
 
 .about-feature {
   display: grid;
-  grid-template-columns: minmax(430px, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(475px, 1.1fr) minmax(0, 1fr);
   gap: 56px;
   align-items: center;
-  width: min(1120px, 100%);
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -975,7 +979,8 @@ p {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   opacity: 0;
   transition: opacity 0.75s ease;
 }
@@ -1128,11 +1133,12 @@ p {
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
   gap: 28px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .message-card,
 .contact-info-card {
+  height: 100%;
   padding: 34px 30px;
   border: 1px solid var(--color-border);
   border-radius: 16px;
@@ -1141,6 +1147,7 @@ p {
 
 .message-card h2,
 .contact-info-card h2 {
+  margin-bottom: 1.65rem;
   text-align: center;
   font-size: clamp(2.05rem, 3vw, 2.9rem);
 }
@@ -1616,7 +1623,7 @@ p {
   .instagram-post-card,
   .instagram-post-lip,
   .instagram-post-brow,
-  .instagram-post-eyeliner {
+  .instagram-post-lash {
     position: relative;
     inset: auto;
     width: 100%;

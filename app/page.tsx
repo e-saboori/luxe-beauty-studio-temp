@@ -47,19 +47,19 @@ const featuredServices = [
 
 const instagramPosts = [
   {
-    src: "/images/lip/lip-blush-result.jpg",
+    src: "/images/instagram/lips.PNG",
     alt: "Lip blush result from Sepid Beauty Studio",
     className: "instagram-post-lip"
   },
   {
-    src: "/images/eyebrows/soft-brow-detail.jpg",
+    src: "/images/instagram/eyebrows.PNG",
     alt: "Soft brow detail result from Sepid Beauty Studio",
     className: "instagram-post-brow"
   },
   {
-    src: "/images/eyeline/eyeliner-shading-result.jpg",
-    alt: "Eyeliner shading result from Sepid Beauty Studio",
-    className: "instagram-post-eyeliner"
+    src: "/images/instagram/lash.PNG",
+    alt: "Lash result from Sepid Beauty Studio",
+    className: "instagram-post-lash"
   }
 ];
 

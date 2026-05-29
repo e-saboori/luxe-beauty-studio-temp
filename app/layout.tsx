@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Allura, Cormorant_Garamond, Great_Vibes, Montserrat } from "next/font/google";
 import "./globals.css";
+import "./luxe-beauty-studio.css";
 import { Footer } from "@/components/Footer";
 import { MobileBookingBar } from "@/components/MobileBookingBar";
 import { ScrollToTop } from "@/components/ScrollToTop";
