@@ -13,7 +13,7 @@ const featuredServices = [
   {
     id: "eyebrows-microneedling",
     name: "Eyebrows Microneedling",
-    category: "Eyebrows",
+    category: "Eyebrows Microneedling",
     description: "Soft brow detail work designed to refresh, define, and enhance your natural brows.",
     price: "CA$280.00",
     duration: "2 hr 30 min",
@@ -24,7 +24,7 @@ const featuredServices = [
   {
     id: "lip-blush-featured",
     name: "Lip Blush",
-    category: "Lips",
+    category: "Lip Blush",
     description: "A natural-looking tint that adds balanced color and definition to your lips.",
     price: "CA$250.00",
     duration: "2 hr 30 min",
@@ -35,7 +35,7 @@ const featuredServices = [
   {
     id: "eyeliner-featured",
     name: "Eyeliner",
-    category: "Eyeline",
+    category: "Eyeliner",
     description: "Soft lash-line shading for a polished look that stays effortlessly refined.",
     price: "CA$250.00",
     duration: "2 hr 30 min",
