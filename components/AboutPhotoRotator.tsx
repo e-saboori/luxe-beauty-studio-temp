@@ -21,7 +21,7 @@ export function AboutPhotoRotator({ photos }: AboutPhotoRotatorProps) {
 
     const timer = window.setInterval(() => {
       setActiveIndex((current) => (current + 1) % photos.length);
-    }, 3000);
+    }, 5000);
 
     return () => window.clearInterval(timer);
   }, [photos.length]);
