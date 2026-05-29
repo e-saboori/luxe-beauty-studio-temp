@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Award, Bookmark, CalendarCheck, Heart, MessageCircle, MoreHorizontal, Play, Send, ShieldCheck } from "lucide-react";
+import { Award, CalendarCheck, ShieldCheck } from "lucide-react";
 import { BookingCTA } from "@/components/BookingCTA";
 import { Button } from "@/components/Button";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -115,27 +115,15 @@ export default async function HomePage() {
           <div className="instagram-showcase" aria-label="Selected Instagram work">
             {instagramPosts.map((post, index) => (
               <article key={post.src} className={`instagram-post-card ${post.className}`}>
-                <div className="instagram-post-top">
-                  <span className="instagram-avatar">S</span>
-                  <span>
-                    <strong>sepidehmz_phibrows</strong>
-                    <small>Toronto, Ontario</small>
-                  </span>
-                  <MoreHorizontal size={18} aria-hidden="true" />
-                </div>
                 <div className="instagram-post-image">
-                  <Image src={withBasePath(post.src)} alt={post.alt} width={480} height={600} sizes="(max-width: 760px) 78vw, 26vw" />
-                  {index === 2 ? (
-                    <span className="instagram-play">
-                      <Play size={30} fill="currentColor" aria-hidden="true" />
-                    </span>
-                  ) : null}
-                </div>
-                <div className="instagram-post-actions" aria-hidden="true">
-                  <Heart size={20} fill={index === 0 ? "currentColor" : "none"} />
-                  <MessageCircle size={20} />
-                  <Send size={20} />
-                  <Bookmark size={20} />
+                  <Image
+                    src={withBasePath(post.src)}
+                    alt={post.alt}
+                    width={1206}
+                    height={1516}
+                    sizes="(max-width: 760px) 100vw, 27vw"
+                    priority={index === 0}
+                  />
                 </div>
               </article>
             ))}
