@@ -301,7 +301,7 @@ p {
 
 .hero-content {
   max-width: 590px;
-  padding: 88px 0;
+  padding: 88px 0 88px 20px;
   position: relative;
   z-index: 2;
 }
@@ -531,7 +531,7 @@ p {
   margin-bottom: 14px;
   color: var(--color-gold-dark);
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0.11em;
   line-height: 1.45;
@@ -1135,7 +1135,7 @@ p {
 }
 
 .contact-hero-copy {
-  padding: 74px 0;
+  padding: 74px 0 74px 20px;
 }
 
 .contact-hero-copy h1 {
@@ -1373,6 +1373,10 @@ p {
   text-align: center;
 }
 
+.faq-heading h1 {
+  white-space: nowrap;
+}
+
 .faq-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1449,6 +1453,7 @@ p {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 36px;
   align-items: center;
+  width: min(1140px, calc(100% - 80px));
 }
 
 .footer-brand .social-links {
@@ -1877,6 +1882,11 @@ p {
 
   .footer-simple {
     text-align: left;
+    width: min(100% - 28px, 1180px);
+  }
+
+  .faq-heading h1 {
+    white-space: normal;
   }
 
   .footer-booking {
