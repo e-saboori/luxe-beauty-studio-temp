@@ -48,6 +48,17 @@ export function ServiceCard({ service, variant = "default" }: ServiceCardProps) 
 
   return (
     <article className="service-card">
+      {service.imageSrc ? (
+        <div className="service-card-image">
+          <Image
+            src={withBasePath(service.imageSrc)}
+            alt={`${service.name} result`}
+            width={520}
+            height={420}
+            sizes="(max-width: 760px) 100vw, 28vw"
+          />
+        </div>
+      ) : null}
       <div className="service-badge" aria-hidden="true">
         <span>{service.category.slice(0, 1)}</span>
       </div>

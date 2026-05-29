@@ -436,6 +436,21 @@ p {
   box-shadow: 0 10px 28px rgba(90, 61, 35, 0.06);
 }
 
+.service-card-image {
+  width: calc(100% + 60px);
+  margin: -30px -30px 24px;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  background: var(--color-bg-soft);
+}
+
+.service-card-image img {
+  width: 100%;
+  aspect-ratio: 1.26;
+  height: auto;
+  object-fit: cover;
+}
+
 .service-badge {
   width: 86px;
   height: 86px;
@@ -613,6 +628,166 @@ p {
 
 .social-section {
   padding-top: 64px;
+}
+
+.instagram-work-section {
+  padding: 94px 0 102px;
+  background: #fffdf9;
+}
+
+.instagram-work-grid {
+  display: grid;
+  grid-template-columns: minmax(560px, 1.35fr) minmax(300px, 0.65fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.instagram-showcase {
+  position: relative;
+  min-height: 560px;
+}
+
+.instagram-post-card {
+  position: absolute;
+  width: min(320px, 42vw);
+  overflow: hidden;
+  border: 1px solid #eee8e1;
+  background: #fff;
+  box-shadow: 0 24px 64px rgba(47, 42, 38, 0.14);
+}
+
+.instagram-post-lip {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.instagram-post-brow {
+  bottom: 0;
+  left: 150px;
+  z-index: 3;
+}
+
+.instagram-post-eyeliner {
+  top: 58px;
+  right: 0;
+  z-index: 2;
+}
+
+.instagram-post-top {
+  min-height: 46px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 8px;
+  align-items: center;
+  padding: 8px 10px;
+  color: #1d1b19;
+  font-size: 0.7rem;
+  line-height: 1.2;
+}
+
+.instagram-post-top strong,
+.instagram-post-top small {
+  display: block;
+}
+
+.instagram-post-top small {
+  color: #6f655d;
+  font-size: 0.62rem;
+}
+
+.instagram-avatar {
+  width: 27px;
+  height: 27px;
+  display: grid;
+  place-items: center;
+  border: 2px solid #f07db9;
+  border-radius: 50%;
+  color: var(--color-gold-dark);
+  font-family: var(--font-cursive), cursive;
+  font-size: 1.05rem;
+}
+
+.instagram-post-image {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-bg-soft);
+}
+
+.instagram-post-image img {
+  width: 100%;
+  aspect-ratio: 0.92;
+  height: auto;
+  object-fit: cover;
+}
+
+.instagram-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #f15b6c;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 26px rgba(47, 42, 38, 0.16);
+}
+
+.instagram-post-actions {
+  display: grid;
+  grid-template-columns: auto auto auto 1fr;
+  gap: 11px;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+  color: #1d1b19;
+}
+
+.instagram-post-actions svg:first-child {
+  color: #f21845;
+}
+
+.instagram-post-actions svg:last-child {
+  justify-self: end;
+}
+
+.instagram-work-copy {
+  max-width: 390px;
+}
+
+.instagram-work-copy .eyebrow {
+  color: var(--color-peach);
+}
+
+.instagram-work-copy h2 {
+  margin-bottom: 16px;
+  color: #0f0e0d;
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  font-size: clamp(3.1rem, 5vw, 4.3rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.instagram-work-copy p:not(.eyebrow) {
+  margin-bottom: 34px;
+  color: #0f0e0d;
+  font-size: 1.02rem;
+  line-height: 1.45;
+}
+
+.instagram-work-copy .button {
+  min-width: 226px;
+  background: #c79b82;
+  border-color: #c79b82;
+}
+
+.instagram-work-copy .button:hover {
+  background: #b9886c;
+  border-color: #b9886c;
 }
 
 .social-button-action {
@@ -1259,9 +1434,22 @@ p {
   }
 
   .service-grid,
+  .instagram-work-grid,
   .trust-grid,
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+
+  .instagram-work-grid {
+    gap: 42px;
+  }
+
+  .instagram-showcase {
+    min-height: 640px;
+  }
+
+  .instagram-post-card {
+    width: min(330px, 58vw);
   }
 
   .service-showcase {
@@ -1413,6 +1601,33 @@ p {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 34px;
+  }
+
+  .instagram-work-section {
+    padding: 68px 0 74px;
+  }
+
+  .instagram-showcase {
+    min-height: auto;
+    display: grid;
+    gap: 18px;
+  }
+
+  .instagram-post-card,
+  .instagram-post-lip,
+  .instagram-post-brow,
+  .instagram-post-eyeliner {
+    position: relative;
+    inset: auto;
+    width: 100%;
+  }
+
+  .instagram-work-copy {
+    max-width: none;
+  }
+
+  .instagram-work-copy .button {
+    width: 100%;
   }
 
   .footer-list,
