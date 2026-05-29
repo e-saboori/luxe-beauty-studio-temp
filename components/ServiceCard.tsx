@@ -1,53 +1,23 @@
 import { Calendar } from "lucide-react";
 import Image from "next/image";
 import { withBasePath } from "@/lib/paths";
-import type { StudioService } from "@/lib/services";
 import { Button } from "./Button";
 
 type ServiceCardProps = {
-  service: StudioService;
-  variant?: "default" | "editorial";
+  service: {
+    id: string;
+    name: string;
+    category: string;
+    description: string;
+    price: string;
+    duration: string;
+    imageSrc: string;
+    bookingUrl: string;
+    sortOrder: number;
+  };
 };
 
-export function ServiceCard({ service, variant = "default" }: ServiceCardProps) {
-  if (variant === "editorial") {
-    return (
-      <article className="service-card service-card-editorial">
-        <div className="service-media" aria-hidden={!service.imageSrc}>
-          {service.imageSrc ? (
-            <Image
-              src={withBasePath(service.imageSrc)}
-              alt={`${service.name} service example`}
-              width={360}
-              height={420}
-              sizes="(max-width: 760px) 100vw, 22vw"
-            />
-          ) : (
-            <Calendar size={64} strokeWidth={1.35} aria-hidden="true" />
-          )}
-        </div>
-        <div className="service-editorial-copy">
-          <h3>{service.name}</h3>
-          <div className="mini-gold-line" aria-hidden="true">
-            <span />
-            <span>*</span>
-          </div>
-          <p>{service.description}</p>
-          <div className="service-editorial-meta">
-            <span>
-              {service.price} · {service.duration}
-            </span>
-          </div>
-          <div className="service-booking-action">
-            <Button href={service.bookingUrl} className="service-book">
-              Book Appointment
-            </Button>
-          </div>
-        </div>
-      </article>
-    );
-  }
-
+export function ServiceCard({ service }: ServiceCardProps) {
   return (
     <article className="service-card">
       {service.imageSrc ? (
@@ -69,7 +39,9 @@ export function ServiceCard({ service, variant = "default" }: ServiceCardProps) 
       <p>{service.description}</p>
       <div className="service-meta">
         <span>
-          {service.price} · {service.duration}
+          {service.price}
+          {" \u30fb "}
+          {service.duration}
         </span>
       </div>
       <div className="service-booking-action">

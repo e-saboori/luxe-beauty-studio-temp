@@ -71,7 +71,6 @@ export default async function HomePage() {
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-content">
-            <p className="eyebrow hero-location">North York / Toronto</p>
             <h1>{business.tagline}</h1>
             <div className="gold-line" />
             <p>{business.description}</p>
@@ -132,7 +131,6 @@ export default async function HomePage() {
           </div>
 
           <div className="instagram-work-copy">
-            <p className="eyebrow">Inspiration</p>
             <h2>Our Work</h2>
             <p>
               Explore the artistry of our skilled beauty artist on Instagram, from soft brows to lip blush and eyeliner

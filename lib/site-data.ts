@@ -1,4 +1,4 @@
-import { Calendar, Facebook, Instagram, MapPin, Phone } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 
 export const bookingUrl =
   process.env.SQUARE_BOOKING_URL ??
@@ -6,7 +6,7 @@ export const bookingUrl =
 
 export const business = {
   name: "Sepid Beauty Studio",
-  tagline: "Natural Lash, Brow & Permanent Makeup Services in North York",
+  tagline: "Natural Lash, Brows & Permanent Makeup Services in North York",
   description:
     "Soft, elegant beauty enhancements including lash extensions, brows, lip blush, eyeliner, and permanent makeup - designed to enhance your natural features.",
   phone: "(647) 685-5659",
@@ -25,8 +25,8 @@ export const business = {
 
 export const navItems = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" }
 ];
@@ -34,12 +34,6 @@ export const navItems = [
 export const socialLinks = [
   { platform: "Instagram", href: "https://www.instagram.com/sepidehmz_phibrows/", icon: Instagram },
   { platform: "Facebook", href: "https://www.facebook.com/sepideh.phibrows/", icon: Facebook }
-];
-
-export const contactLinks = [
-  { label: business.phone, href: `tel:${business.phone.replace(/[^\d+]/g, "")}`, icon: Phone },
-  { label: business.address, href: "/contact", icon: MapPin },
-  { label: "Book Appointment", href: bookingUrl, icon: Calendar }
 ];
 
 export const artist = {
@@ -52,17 +46,8 @@ export const artist = {
     "For me, beauty is more than a service. It is a combination of artistry, precision, and attention to detail. That is why I strive to create not only beautiful results, but also a sense of confidence, comfort, and satisfaction for every client.",
     "Using high-quality products, maintaining proper hygiene standards, and prioritizing the health of natural lashes and skin are essential parts of my work philosophy.",
     "I believe true beauty comes from balance, subtlety, and enhancing what is naturally beautiful. My goal is for every client to leave feeling more confident, refreshed, and effortlessly beautiful."
-  ],
-  credentials: [
-    "Over 10 years of beauty industry experience",
-    "Lash extensions, brow shaping, and microblading",
-    "Lip blush, eyeliner shading, and permanent makeup",
-    "High-quality products, hygiene, and natural lash and skin health"
   ]
 };
-
-export const homeAboutCopy =
-  "With over 10 years of experience, Sepid helps clients feel confident through lash extensions, brow shaping, semi-permanent makeup, and beauty care designed to enhance natural features.";
 
 export const trustPoints = [
   {
@@ -143,77 +128,3 @@ export const values = [
     copy: "You should leave feeling comfortable, refreshed, and effortlessly beautiful."
   }
 ];
-
-export const galleryGroups = [
-  {
-    id: "lashes",
-    label: "Lashes",
-    photos: [
-      {
-        src: "/images/lash/classic-lash-result.jpg",
-        alt: "Soft glam lash extension detail",
-        label: "Classic Lash Extensions"
-      },
-      {
-        src: "/images/lash/lash-application.jpg",
-        alt: "Beauty artist applying lash service",
-        label: "Lash Application"
-      },
-      {
-        src: "/images/lash/volume-lash-result.jpg",
-        alt: "Full lash extension result",
-        label: "Volume Lashes"
-      }
-    ]
-  },
-  {
-    id: "eyebrows",
-    label: "Eyebrows",
-    photos: [
-      {
-        src: "/images/eyebrows/brow-shaping-result.jpg",
-        alt: "Clean beauty tools for brow shaping",
-        label: "Brow Shaping"
-      },
-      {
-        src: "/images/eyebrows/microblading-result.jpg",
-        alt: "Detailed eyebrow beauty result",
-        label: "Microblading"
-      },
-      {
-        src: "/images/eyebrows/soft-brow-detail.jpg",
-        alt: "Soft brow enhancement result",
-        label: "Brow Detail"
-      }
-    ]
-  },
-  {
-    id: "lips",
-    label: "Lips",
-    photos: [
-      {
-        src: "/images/lip/lip-blush-result.jpg",
-        alt: "Glossy lip blush cosmetic result",
-        label: "Lip Blush"
-      }
-    ]
-  },
-  {
-    id: "eyeliner",
-    label: "Eyeliner",
-    photos: [
-      {
-        src: "/images/eyeline/eyeliner-shading-result.jpg",
-        alt: "Elegant eyeliner makeup detail",
-        label: "Eyeliner Shading"
-      }
-    ]
-  }
-];
-
-export const gallery = galleryGroups.flatMap((group) =>
-  group.photos.map((photo) => ({
-    ...photo,
-    category: group.label
-  }))
-);

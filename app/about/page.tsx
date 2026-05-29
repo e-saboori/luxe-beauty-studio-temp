@@ -16,7 +16,7 @@ export default function AboutPage() {
       <section className="about-page">
         <div className="container">
           <div className="about-title">
-            <h1>Meet Your Artist</h1>
+            <h1>Meet Your Artist, Sepid</h1>
           </div>
 
           <div className="about-feature">

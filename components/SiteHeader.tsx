@@ -12,7 +12,7 @@ export function Logo() {
     <Link className="logo" href="/" aria-label="Sepid Beauty Studio home">
       <span className="logo-mark">S</span>
       <span>
-        SEPID
+        EPID
         <small>Beauty Studio</small>
       </span>
     </Link>

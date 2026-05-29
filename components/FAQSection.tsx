@@ -5,8 +5,7 @@ export function FAQSection() {
     <section className="faq-section">
       <div className="container">
         <div className="section-heading faq-heading">
-          <p className="eyebrow">Questions</p>
-          <h2>Before You Book</h2>
+          <h1>Frequently Asked Questions</h1>
         </div>
 
         <div className="faq-grid">
