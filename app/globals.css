@@ -167,8 +167,8 @@ p {
   min-height: 96px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 28px;
+  justify-content: flex-start;
+  gap: 34px;
 }
 
 .logo {
@@ -208,12 +208,16 @@ p {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
   font-family: var(--font-body), Arial, Helvetica, sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.11em;
   text-transform: uppercase;
+}
+
+.nav-book {
+  margin-left: auto;
 }
 
 .nav-links a {
@@ -1453,6 +1457,7 @@ p {
   }
 
   .nav-book {
+    margin-left: 0;
     min-height: 42px;
     padding: 0 16px;
   }
