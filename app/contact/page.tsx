@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { LockKeyhole, Mail, MapPin, Pencil, Phone, Send, User, Clock, Instagram, Facebook } from "lucide-react";
-import { BookingCTA } from "@/components/BookingCTA";
 import { withBasePath } from "@/lib/paths";
 import { business } from "@/lib/site-data";
 
@@ -131,8 +130,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
-      <BookingCTA title="Ready to Book?" copy="Your perfect look is just a click away." />
     </>
   );
 }

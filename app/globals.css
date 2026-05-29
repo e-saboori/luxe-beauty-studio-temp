@@ -39,6 +39,22 @@ main {
   background: var(--color-bg);
 }
 
+.page-transition {
+  animation: pageFadeIn 0.35s ease both;
+}
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -505,6 +521,21 @@ p {
 
 .featured-grid .service-badge {
   display: none;
+}
+
+.featured-grid .service-category {
+  display: none;
+}
+
+.featured-grid .service-card h3 {
+  margin-bottom: 14px;
+  color: var(--color-gold-dark);
+  font-family: var(--font-body), Arial, Helvetica, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.11em;
+  line-height: 1.45;
+  text-transform: uppercase;
 }
 
 .service-badge {
@@ -1415,7 +1446,7 @@ p {
 
 .footer-simple {
   display: grid;
-  grid-template-columns: minmax(260px, 1.3fr) minmax(240px, 1fr) auto;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 36px;
   align-items: center;
 }
@@ -1432,8 +1463,18 @@ p {
   line-height: 1.7;
 }
 
-.footer-contact p {
+.footer-contact p,
+.footer-contact a {
   margin: 0;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 10px;
+  align-items: start;
+}
+
+.footer-contact svg {
+  margin-top: 4px;
+  color: var(--color-gold-dark);
 }
 
 .footer-contact a:hover {
@@ -1605,9 +1646,16 @@ p {
   }
 
   .nav-links a {
+    width: fit-content;
     min-height: 36px;
     justify-content: flex-start;
-    padding: 0;
+    justify-self: start;
+    padding: 0 2px;
+  }
+
+  .nav-links a::after {
+    right: 0;
+    left: 0;
   }
 
   .nav-book {

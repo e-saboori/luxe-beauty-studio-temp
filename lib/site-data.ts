@@ -1,4 +1,4 @@
-import { Calendar, Facebook, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import { Calendar, Facebook, Instagram, MapPin, Phone } from "lucide-react";
 
 export const bookingUrl =
   process.env.SQUARE_BOOKING_URL ??
@@ -27,6 +27,7 @@ export const navItems = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" }
 ];
 

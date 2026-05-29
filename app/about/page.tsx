@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Heart, ShieldCheck, Sparkles, UserRound } from "lucide-react";
 import { AboutPhotoRotator } from "@/components/AboutPhotoRotator";
-import { BookingCTA } from "@/components/BookingCTA";
 import { aboutPhotos, artist, values } from "@/lib/site-data";
 
 export const metadata: Metadata = {
@@ -57,12 +56,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      <BookingCTA
-        title="Ready to Book?"
-        copy="Your perfect look is just a click away."
-        buttonLabel="Book Appointment"
-      />
     </>
   );
 }

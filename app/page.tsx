@@ -1,9 +1,6 @@
 import Image from "next/image";
 import { Award, CalendarCheck, ShieldCheck } from "lucide-react";
-import { BookingCTA } from "@/components/BookingCTA";
-import { BookingHelperText } from "@/components/BookingHelperText";
 import { Button } from "@/components/Button";
-import { FAQSection } from "@/components/FAQSection";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ServiceCard } from "@/components/ServiceCard";
 import { withBasePath } from "@/lib/paths";
@@ -81,7 +78,6 @@ export default async function HomePage() {
             <div className="hero-actions">
               <div className="hero-booking-action">
                 <Button href={bookingUrl}>Book Appointment</Button>
-                <BookingHelperText />
               </div>
               <Button href="/services" variant="secondary">
                 View Services
@@ -163,9 +159,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <FAQSection />
-
-      <BookingCTA title="Ready to Book?" copy="Your perfect look is just a click away." buttonLabel="Book Appointment" />
     </>
   );
 }

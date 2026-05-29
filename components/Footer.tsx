@@ -1,7 +1,6 @@
 "use client";
 
-import { Calendar } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { Calendar, MapPin, Phone } from "lucide-react";
 import { bookingUrl, business } from "@/lib/site-data";
 import { BookingHelperText } from "./BookingHelperText";
 import { Button } from "./Button";
@@ -9,9 +8,6 @@ import { Logo } from "./SiteHeader";
 import { SocialLinks } from "./SocialLinks";
 
 export function Footer() {
-  const pathname = usePathname();
-  const isContactPage = pathname.startsWith("/contact");
-
   return (
     <footer className="site-footer">
       <div className="container footer-simple">
@@ -20,12 +16,16 @@ export function Footer() {
           <SocialLinks />
         </div>
 
-        {!isContactPage ? (
-          <div className="footer-contact">
-            <p>{business.address}</p>
-            <a href={`tel:${business.phone.replace(/[^\d+]/g, "")}`}>{business.phone}</a>
-          </div>
-        ) : null}
+        <div className="footer-contact">
+          <p>
+            <MapPin size={17} aria-hidden="true" />
+            <span>{business.address}</span>
+          </p>
+          <a href={`tel:${business.phone.replace(/[^\d+]/g, "")}`}>
+            <Phone size={17} aria-hidden="true" />
+            <span>{business.phone}</span>
+          </a>
+        </div>
 
         <div className="footer-booking">
           <Button href={bookingUrl}>

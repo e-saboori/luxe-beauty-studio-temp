@@ -2,7 +2,6 @@ import { Calendar } from "lucide-react";
 import Image from "next/image";
 import { withBasePath } from "@/lib/paths";
 import type { StudioService } from "@/lib/services";
-import { BookingHelperText } from "./BookingHelperText";
 import { Button } from "./Button";
 
 type ServiceCardProps = {
@@ -43,7 +42,6 @@ export function ServiceCard({ service, variant = "default" }: ServiceCardProps) 
             <Button href={service.bookingUrl} className="service-book">
               Book Appointment
             </Button>
-            <BookingHelperText />
           </div>
         </div>
       </article>
@@ -79,7 +77,6 @@ export function ServiceCard({ service, variant = "default" }: ServiceCardProps) 
           <Calendar size={15} aria-hidden="true" />
           Book Appointment
         </Button>
-        <BookingHelperText />
       </div>
     </article>
   );

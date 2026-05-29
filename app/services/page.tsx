@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { BookingHelperText } from "@/components/BookingHelperText";
 import { Button } from "@/components/Button";
-import { FAQSection } from "@/components/FAQSection";
 import { FadeInOnScroll } from "@/components/FadeInOnScroll";
 import { withBasePath } from "@/lib/paths";
 import { bookingUrl } from "@/lib/site-data";
@@ -68,7 +66,6 @@ export default function ServicesPage() {
                 <p>{service.description}</p>
                 <div className="service-booking-action service-showcase-action">
                   <Button href={bookingUrl}>Book Appointment</Button>
-                  <BookingHelperText />
                 </div>
               </div>
               <div className="service-showcase-image">
@@ -85,7 +82,6 @@ export default function ServicesPage() {
         ))}
       </div>
 
-      <FAQSection />
     </>
   );
 }
