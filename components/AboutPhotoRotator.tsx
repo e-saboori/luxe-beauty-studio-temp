@@ -33,8 +33,8 @@ export function AboutPhotoRotator({ photos }: AboutPhotoRotatorProps) {
           key={photo.src}
           src={withBasePath(photo.src)}
           alt={photo.alt}
-          width={620}
-          height={720}
+          width={900}
+          height={1600}
           priority={index === 0}
           className={index === activeIndex ? "is-active" : ""}
           sizes="(max-width: 760px) 100vw, 45vw"
